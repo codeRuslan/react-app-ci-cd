@@ -1,0 +1,4 @@
+* @codeRuslan
+*.js @codeRuslan
+*.yml @codeRuslan
+/public/ @codeRuslan

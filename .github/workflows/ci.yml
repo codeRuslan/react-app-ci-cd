@@ -20,7 +20,7 @@ jobs:
       - name: Use NodeJS
         uses: actions/setup-node@v1
         with:
-          node-version: "14.17"
+          node-version: "12.x"
       - run: npm ci 
       #- run: npm run format:check
       - run: npm test -- --coverage 
@@ -40,7 +40,11 @@ jobs:
         with:
           name: build
           path: build
-      #- run: npm install -g surge
+      - name: ZIP assets
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        run: |
+          zip -r build.zip ./build
+          zip -r build.zip ./coverage
       - name: Create a Release
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         run: npx semantic-release

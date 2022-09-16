@@ -20,7 +20,7 @@ jobs:
       - name: Use NodeJS
         uses: actions/setup-node@v1
         with:
-          node-version: "12.x"
+          node-version: "15.x"
       - run: npm ci 
       #- run: npm run format:check
       - run: npm test -- --coverage 
@@ -43,7 +43,7 @@ jobs:
       #- run: npm install -g surge
       - name: Create a Release
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
-        run: npx -p node@lts -c "npx semantic-release" #npx semantic-release
+        run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Deploy to Staging

@@ -6,8 +6,13 @@ Git Flow - was chosen as the main branching workflow for this project, even thou
 
 [![2022-09-27-19-48-46.png](https://i.postimg.cc/zBmdTXn2/2022-09-27-19-48-46.png)](https://postimg.cc/SXr7h41c)
 
-As Disclaimer, following should be mentioned. That branch protection is turned on, in order to prevent developers to push code right into Develop or Master branches. While you could notice, that in git history - it has some pushes into Master and Develop branch - it is important to know that it was done for testing purposes and were closed, therefore in usual work environment - branches will be protected. Also, all tokens, secrets, sensetive information has been uploaded into secrets in Github, therefore all sensetive information has been hidden for protective reasons.
+As Disclaimer, following should be mentioned. That branch protection is turned on, in order to prevent developers to push code right into Develop or Master branches. While you could notice, that in git history - it has some pushes into Master and Develop branch - it is important to know that it was done for testing purposes and were closed, therefore in usual work environment - branches will be protected. Also, all tokens, secrets, sensetive information has been uploaded into secrets in Github, therefore all sensetive information has been hidden for protective reasons. Also, main technical components mentioned down below:
 
+- NPM as package manager 
+- Surge as fast deploying tool for React App
+- Prettier for formatting rules 
+- CodeCov to upload code coverage 
+- Different Commit Linters 
 
 ----
 
